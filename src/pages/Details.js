@@ -32,7 +32,7 @@ function Details({ route , navigation }) {
 
     return (
         <ScrollView style={mealDetailsPageStyle.container}>
-            <MealDetails ingredients={ingredients} mealDetail={mealDetail} onYoutube={()=> navigation.navigate("YoutubeWebView", {link:mealDetail.strYoutube})} />
+            <MealDetails ingredients={ingredients} mealDetail={mealDetail} />
         </ScrollView >
     )
 }

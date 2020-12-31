@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Text, ImageBackground, TouchableOpacity, Linking, Platform } from 'react-native'
+import { View, Text, ImageBackground, TouchableOpacity, Linking } from 'react-native'
 import { Ingredients } from "../components/Ingredients";
 import { mealDetailsCompStyle } from "../styles/componentsStyles"
 
@@ -15,7 +15,7 @@ function MealDetails(props) {
             <Ingredients ingredients={props.ingredients}/>
             <Text style={mealDetailsCompStyle.title}>Instruction</Text>
             <Text style={mealDetailsCompStyle.instructionText}>{props.mealDetail.strInstructions}</Text>
-            <TouchableOpacity style={mealDetailsCompStyle.buttonYoutube} onPress={()=>props.onYoutube()}>
+            <TouchableOpacity style={mealDetailsCompStyle.buttonYoutube} onPress={()=>Linking.openURL(props.mealDetail.strYoutube)}>
                 <Text style={mealDetailsCompStyle.buttonText}>Youtube</Text>
             </TouchableOpacity>
         </View>
